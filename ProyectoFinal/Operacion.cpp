@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "Operacion.h"
 
-const char Operacion::OPERADORES[Operacion::NUM_OPERADORES] = {'+', '-', '/', '*'};
+const char Operacion::OPERADORES[Operacion::NUM_OPERADORES] = { '+', '-', '/', '*', '^', 's', 'c', 't', 'l', 'F' }
 
 Operacion::Operacion(string operacion) {
 	this->operacion = operacion;
@@ -13,9 +13,10 @@ Operacion::Operacion(string operacion) {
 Operacion::~Operacion() {
 }
 
-Elemento * Operacion::descomponer() {
+template <class T>
+NodoArbol<T, Lista> * Operacion::descomponer() {
 
-	Elemento * resultado;
+	NodoArbol<T, Lista> * resultado;
 	int indice = indiceMenorPrecedencia(operacion);
 
 	if (indice == -1) {

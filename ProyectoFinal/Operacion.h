@@ -1,5 +1,6 @@
 
 #pragma once
+#include "stdafx.h"
 
 #include "Elemento.h"
 #include "Operando.h"
@@ -8,6 +9,15 @@
 #include "OperadorResta.h"
 #include "OperadorDivision.h"
 #include "OperadorMultiplicacion.h"
+#include "NodoArbol.h"
+#include "Lista.h"
+#include "OperadorElevacion"
+#include "OperadorSeno.h"
+#include "OperadorCoseno.h"
+#include "OperadorTangente.h"
+#include "OperadorLogaritmo.h"
+#include "OperadorFuncion.h"
+
 
 using namespace std;
 
@@ -20,6 +30,8 @@ private:
 	static const char RIGHT_PARENTHESIS = ')';
 
 	string operacion;
+
+	Lista<int> * hijosArbol;
 	
 	virtual void imprimir(ostream&);
 	void eliminarEspaciosEnBlanco();
@@ -29,9 +41,12 @@ private:
 
 public:
 	Operacion(string);
+	
 	virtual ~Operacion();
 
-	Elemento * descomponer();
+	template< class T > ;
+	NodoArbol <T, Lista> * descomponer();
+	
 	string getValor();
 
 	virtual Elemento * clonar();

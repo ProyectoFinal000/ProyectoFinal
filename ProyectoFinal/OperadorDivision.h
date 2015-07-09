@@ -14,7 +14,7 @@ public:
 	OperadorDivision();
 	~OperadorDivision();
 
-	virtual Elemento * operar(Elemento *, Elemento *);
+	virtual Elemento * operar(Lista<Elemento>&);
 
 	virtual Elemento * clonar();
 };

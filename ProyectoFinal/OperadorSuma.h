@@ -1,11 +1,11 @@
 
 #pragma once
 
-#include "Operador.h"
+#include "OperadorBinario.h"
 #include "Operando.h"
 
 class OperadorSuma :
-	public Operador {
+	public OperadorBinario {
 
 protected:
 	virtual void imprimir(ostream&);
@@ -14,7 +14,7 @@ public:
 	OperadorSuma();
 	~OperadorSuma();
 
-	virtual Elemento * operar(Elemento *, Elemento *);
+	virtual Elemento * operar(Lista<Elemento>&);
 
 	virtual Elemento * clonar();
 };
