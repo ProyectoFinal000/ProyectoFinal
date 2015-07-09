@@ -82,6 +82,8 @@
     <ClInclude Include="Arbol.h" />
     <ClInclude Include="Elemento.h" />
     <ClInclude Include="Lista.h" />
+    <ClInclude Include="NodoArbol.h" />
+    <ClInclude Include="NodoLista.h" />
     <ClInclude Include="Operacion.h" />
     <ClInclude Include="Operador.h" />
     <ClInclude Include="OperadorDivision.h" />
