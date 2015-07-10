@@ -104,9 +104,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arbol.cpp" />
     <ClCompile Include="Elemento.cpp" />
-    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Operacion.cpp" />
     <ClCompile Include="OperadorCoseno.cpp" />
     <ClCompile Include="OperadorDivision.cpp" />
